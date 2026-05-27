@@ -1052,9 +1052,20 @@
     .cs-footer-bottom {
         .cs-container {
             flex-direction: row;
+            flex-wrap: nowrap;
             justify-content: space-between;
+            align-items: center;
         }
 
-        p { text-align: left; }
+        p {
+            text-align: left;
+            flex-shrink: 1;
+            min-width: 0;
+        }
+
+        .cs-footer-author {
+            flex-shrink: 0;
+            white-space: nowrap;
+        }
     }
 }
