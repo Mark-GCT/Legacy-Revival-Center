@@ -1,0 +1,86 @@
+<!-- ============================================ -->
+<!--                 Navigation                   -->
+<!-- ============================================ -->
+
+<header id="cs-navigation">
+    <div class="cs-container">
+        <!--Nav Logo-->
+        <a href="/" class="cs-logo" aria-label="Legacy Revival Center Home">
+            <img src="/assets/images/lrc-logo.png" alt="Legacy Revival Center" width="200" height="60" decoding="async">
+        </a>
+        <!--Navigation List-->
+        <nav class="cs-nav" aria-label="main navigation">
+            <!--Mobile Nav Toggle-->
+            <button class="cs-toggle" id="cs-toggle" aria-expanded="false" aria-controls="cs-ul-wrapper" aria-label="mobile menu toggle" aria-haspopup="menu">
+                <span class="cs-box" aria-hidden="true">
+                    <span class="cs-line cs-line1" aria-hidden="true"></span>
+                    <span class="cs-line cs-line2" aria-hidden="true"></span>
+                    <span class="cs-line cs-line3" aria-hidden="true"></span>
+                </span>
+            </button>
+            <div class="cs-ul-wrapper" id="cs-ul-wrapper">
+                <ul id="cs-expanded" class="cs-ul" role="list">
+                    <li class="cs-li">
+                        <a href="/" class="cs-li-link {% if page.url == '/' %} cs-active {% endif %}" {% if page.url == '/' %} aria-current="page" {% endif %}>
+                            Home
+                        </a>
+                    </li>
+                    <!--About Us Dropdown-->
+                    <li class="cs-li cs-dropdown" aria-haspopup="true">
+                        <button class="cs-li-link cs-dropdown-toggle" aria-expanded="false" id="about-dropdown-toggle">
+                            About Us
+                            <img class="cs-drop-icon" src="/assets/svgs/chevron.svg" alt="" width="15" height="15" aria-hidden="true" decoding="async">
+                        </button>
+                        <ul class="cs-drop-ul" aria-labelledby="about-dropdown-toggle" role="menu">
+                            <li class="cs-drop-li" role="none">
+                                <a href="/about/" class="cs-li-link cs-drop-link" role="menuitem" {% if page.url == '/about/' %} aria-current="page" {% endif %}>
+                                    About Us
+                                </a>
+                            </li>
+                            <li class="cs-drop-li" role="none">
+                                <a href="/beliefs/" class="cs-li-link cs-drop-link" role="menuitem" {% if page.url == '/beliefs/' %} aria-current="page" {% endif %}>
+                                    Our Beliefs
+                                </a>
+                            </li>
+                            <li class="cs-drop-li" role="none">
+                                <a href="/leadership/" class="cs-li-link cs-drop-link" role="menuitem" {% if page.url == '/leadership/' %} aria-current="page" {% endif %}>
+                                    Our Leadership
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/sermons/" class="cs-li-link {% if page.url == '/sermons/' %} cs-active {% endif %}" {% if page.url == '/sermons/' %} aria-current="page" {% endif %}>
+                            Sermons
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/fellowships/" class="cs-li-link {% if page.url == '/fellowships/' %} cs-active {% endif %}" {% if page.url == '/fellowships/' %} aria-current="page" {% endif %}>
+                            Legacy Fellowships
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/blog/" class="cs-li-link {% if page.url == '/blog/' %} cs-active {% endif %}" {% if page.url == '/blog/' %} aria-current="page" {% endif %}>
+                            Legacy Blog
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/events/" class="cs-li-link {% if page.url == '/events/' %} cs-active {% endif %}" {% if page.url == '/events/' %} aria-current="page" {% endif %}>
+                            Events
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/contact/" class="cs-li-link {% if page.url == '/contact/' %} cs-active {% endif %}" {% if page.url == '/contact/' %} aria-current="page" {% endif %}>
+                            Contact Us
+                        </a>
+                    </li>
+                    <li class="cs-li cs-nav-give">
+                        <a href="/give/" class="cs-button-give {% if page.url == '/give/' %} cs-active {% endif %}">
+                            Give
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>

@@ -1,0 +1,152 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// CRITICAL STYLES — LRC Homepage Hero
+// Above-the-fold styles for the homepage hero section.
+// Loaded inline/first so the hero renders immediately.
+// ─────────────────────────────────────────────────────────────────────────────
+
+/*-- -------------------------- -->
+<---     Nav Spacing Buffer      -->
+<--- -------------------------- -*/
+
+// Push main content below the fixed nav on all pages
+@media only screen and (min-width: 0px) {
+    main {
+        // Height of the mobile nav bar
+        padding-top: (80/16rem);
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    main {
+        // Height of the desktop nav bar
+        padding-top: (64/16rem);
+    }
+}
+
+/*-- -------------------------- -->
+<---         Hero Section        -->
+<--- -------------------------- -*/
+
+@media only screen and (min-width: 0px) {
+    #lrc-hero {
+        position: relative;
+        min-height: min(90vh, 900px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background: var(--secondary);
+
+        // Background image
+        .cs-picture {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            display: block;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0.5;
+            }
+
+            // Gradient overlay
+            &:after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(to top, var(--secondary) 0%, rgba(18, 18, 18, 0.5) 50%, transparent 100%);
+                z-index: 1;
+            }
+        }
+
+        // Noise texture
+        &:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 2;
+            mix-blend-mode: overlay;
+        }
+
+        // Content
+        .cs-container {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 3rem;
+            padding-bottom: 4rem;
+            // Override default padding on small screens
+            padding-inline: 1.5rem;
+        }
+
+        .cs-eyebrow {
+            color: var(--primary);
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            font-family: var(--font-sans);
+        }
+
+        .cs-title {
+            font-family: var(--font-display);
+            font-size: clamp(3.5rem, 12vw, 9rem);
+            font-weight: 900;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: -0.03em;
+            line-height: 0.95;
+            margin-bottom: 1.5rem;
+            max-width: none;
+
+            .cs-accent {
+                color: var(--primary);
+                opacity: 0.9;
+                display: block;
+            }
+        }
+
+        .cs-subtitle {
+            font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 42rem;
+            margin: 0 auto 2.5rem;
+            font-weight: 300;
+        }
+
+        .cs-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .cs-button-solid {
+            height: 3.5rem;
+            padding: 0 2rem;
+            font-size: 1rem;
+        }
+
+        .cs-button-outline {
+            height: 3.5rem;
+            padding: 0 2rem;
+            font-size: 1rem;
+            border-color: #fff;
+            color: #fff;
+
+            &:hover {
+                background: #fff;
+                color: var(--secondary);
+            }
+        }
+    }
+}

@@ -1,0 +1,229 @@
+---
+title: "Legacy Revival Center — Leaving a Legacy"
+description: "A non-denominational, pentecostal, revivalist church in Collinsville, IL. Passionate worship, biblical teaching, and authentic community."
+permalink: "/"
+tags: "sitemap"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <!-- Hero styles are loaded first so the above-the-fold section renders immediately -->
+    <link rel="stylesheet" href="/assets/css/critical.css"/>
+
+    {% if client.isProduction %}
+        <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/assets/css/local.css"></noscript>
+    {% else %}
+        <link rel="stylesheet" href="/assets/css/local.css"/>
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--                    Hero                      -->
+    <!-- ============================================ -->
+    <section id="lrc-hero">
+        <picture class="cs-picture">
+            <source media="(max-width: 600px)"
+                srcset="{% getUrl '/assets/images/lrc-sanctuary.jpg' | resize({ width: 768, height: 900 }) | avif %}" type="image/avif">
+            <source media="(max-width: 600px)"
+                srcset="{% getUrl '/assets/images/lrc-sanctuary.jpg' | resize({ width: 768, height: 900 }) | webp %}" type="image/webp">
+            <source media="(min-width: 601px)"
+                srcset="{% getUrl '/assets/images/lrc-sanctuary.jpg' | resize({ width: 1920, height: 900 }) | avif %}" type="image/avif">
+            <source media="(min-width: 601px)"
+                srcset="{% getUrl '/assets/images/lrc-sanctuary.jpg' | resize({ width: 1920, height: 900 }) | webp %}" type="image/webp">
+            <img src="{% getUrl '/assets/images/lrc-sanctuary.jpg' | resize({ width: 1920, height: 900 }) | jpeg %}"
+                alt="Worship at Legacy Revival Center" width="1920" height="900" loading="eager" decoding="async">
+        </picture>
+
+        <div class="cs-container">
+            <span class="cs-eyebrow">Welcome to</span>
+            <h1 class="cs-title">
+                Legacy<br>
+                <span class="cs-accent">Revival</span>
+            </h1>
+            <p class="cs-subtitle">Leaving a Legacy</p>
+            <div class="cs-actions">
+                <a href="/about/" class="cs-button-solid">Plan a Visit</a>
+                <a href="/sermons/" class="cs-button-outline">Watch Latest</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--            Countdown to New Building         -->
+    <!-- ============================================ -->
+    <div id="lrc-countdown">
+        <div class="cs-container">
+            <h2 class="cs-countdown-title">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Moving to our New Building
+            </h2>
+            <div class="cs-countdown-units" role="timer" aria-label="Countdown to new building">
+                <div class="cs-countdown-unit">
+                    <div class="cs-countdown-value" id="cd-days" aria-label="days">00</div>
+                    <span class="cs-countdown-label">Days</span>
+                </div>
+                <div class="cs-countdown-unit">
+                    <div class="cs-countdown-value" id="cd-hours" aria-label="hours">00</div>
+                    <span class="cs-countdown-label">Hours</span>
+                </div>
+                <div class="cs-countdown-unit">
+                    <div class="cs-countdown-value" id="cd-minutes" aria-label="minutes">00</div>
+                    <span class="cs-countdown-label">Minutes</span>
+                </div>
+                <div class="cs-countdown-unit">
+                    <div class="cs-countdown-value" id="cd-seconds" aria-label="seconds">00</div>
+                    <span class="cs-countdown-label">Seconds</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!--            Service Times & Latest Sermon     -->
+    <!-- ============================================ -->
+    <section id="lrc-services">
+        <div class="cs-container">
+            <div class="cs-service-grid">
+
+                <!-- Service Schedule -->
+                <div class="cs-fade-up">
+                    <h2 class="cs-title">Join Us <span class="text-primary">This Week</span></h2>
+                    <p class="cs-text" style="margin-bottom:2rem;">
+                        We believe in the power of gathering together. Experience passionate worship, biblical teaching, and authentic community.
+                    </p>
+                    <div class="cs-service-items">
+
+                        <div class="cs-service-item">
+                            <div class="cs-service-icon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="cs-service-label">Sunday Service</h3>
+                                <p class="cs-service-time">10:00 AM &amp; 6:00 PM</p>
+                            </div>
+                        </div>
+
+                        <div class="cs-service-item">
+                            <div class="cs-service-icon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="cs-service-label">Wednesday Service</h3>
+                                <p class="cs-service-time">7:00 PM</p>
+                            </div>
+                        </div>
+
+                        <div class="cs-service-item">
+                            <div class="cs-service-icon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="cs-service-label">Location</h3>
+                                <p class="cs-service-time">1240 McDonough Lake Road, Collinsville, IL</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Latest Sermon Card -->
+                <div class="cs-sermon-card cs-fade-up">
+                    <picture>
+                        <source srcset="{% getUrl '/assets/images/sermons-hero.png' | resize({ width: 700, height: 500 }) | avif %}" type="image/avif">
+                        <source srcset="{% getUrl '/assets/images/sermons-hero.png' | resize({ width: 700, height: 500 }) | webp %}" type="image/webp">
+                        <img src="{% getUrl '/assets/images/sermons-hero.png' | resize({ width: 700, height: 500 }) | jpeg %}"
+                            alt="Legacy Revival Center sanctuary" width="700" height="500" loading="lazy" decoding="async">
+                    </picture>
+                    <div class="cs-sermon-card-border" aria-hidden="true"></div>
+                    <div class="cs-sermon-card-overlay">
+                        <h3>Latest Message</h3>
+                        <p>Watch our latest Sunday morning sermon.</p>
+                        <a href="/sermons/" class="cs-link-arrow">
+                            Watch Now
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--              Global Impact                   -->
+    <!-- ============================================ -->
+    <section id="lrc-impact">
+        <div class="cs-container">
+
+            <div class="cs-intro">
+                <h2 class="cs-title cs-fade-up">Global <span class="text-primary">Impact</span></h2>
+                <p class="cs-text cs-fade-up">
+                    Legacy Revival Center is committed to spreading the gospel not just in Collinsville, but around the world through our global fellowships.
+                </p>
+            </div>
+
+            <div class="cs-impact-grid">
+
+                <a href="/fellowships/#uganda" class="cs-country-card cs-fade-up">
+                    <picture>
+                        <source srcset="{% getUrl '/assets/images/lrc-uganda.jpg' | resize({ width: 600, height: 400 }) | avif %}" type="image/avif">
+                        <source srcset="{% getUrl '/assets/images/lrc-uganda.jpg' | resize({ width: 600, height: 400 }) | webp %}" type="image/webp">
+                        <img src="{% getUrl '/assets/images/lrc-uganda.jpg' | resize({ width: 600, height: 400 }) | jpeg %}"
+                            alt="Fellowship in Uganda" width="600" height="400" loading="lazy" decoding="async">
+                    </picture>
+                    <div class="cs-card-gradient" aria-hidden="true"></div>
+                    <div class="cs-card-body">
+                        <div class="cs-card-accent" aria-hidden="true"></div>
+                        <h3 class="cs-card-name">Uganda</h3>
+                        <span class="cs-card-link">
+                            Read More
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </span>
+                    </div>
+                </a>
+
+                <a href="/fellowships/#argentina" class="cs-country-card cs-fade-up">
+                    <picture>
+                        <source srcset="{% getUrl '/assets/images/lrc-argentina.jpg' | resize({ width: 600, height: 400 }) | avif %}" type="image/avif">
+                        <source srcset="{% getUrl '/assets/images/lrc-argentina.jpg' | resize({ width: 600, height: 400 }) | webp %}" type="image/webp">
+                        <img src="{% getUrl '/assets/images/lrc-argentina.jpg' | resize({ width: 600, height: 400 }) | jpeg %}"
+                            alt="Fellowship in Argentina" width="600" height="400" loading="lazy" decoding="async">
+                    </picture>
+                    <div class="cs-card-gradient" aria-hidden="true"></div>
+                    <div class="cs-card-body">
+                        <div class="cs-card-accent" aria-hidden="true"></div>
+                        <h3 class="cs-card-name">Argentina</h3>
+                        <span class="cs-card-link">
+                            Read More
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </span>
+                    </div>
+                </a>
+
+                <a href="/fellowships/#nepal" class="cs-country-card cs-fade-up">
+                    <picture>
+                        <source srcset="{% getUrl '/assets/images/lrc-nepal.jpg' | resize({ width: 600, height: 400 }) | avif %}" type="image/avif">
+                        <source srcset="{% getUrl '/assets/images/lrc-nepal.jpg' | resize({ width: 600, height: 400 }) | webp %}" type="image/webp">
+                        <img src="{% getUrl '/assets/images/lrc-nepal.jpg' | resize({ width: 600, height: 400 }) | jpeg %}"
+                            alt="Fellowship in Nepal" width="600" height="400" loading="lazy" decoding="async">
+                    </picture>
+                    <div class="cs-card-gradient" aria-hidden="true"></div>
+                    <div class="cs-card-body">
+                        <div class="cs-card-accent" aria-hidden="true"></div>
+                        <h3 class="cs-card-name">Nepal</h3>
+                        <span class="cs-card-link">
+                            Read More
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

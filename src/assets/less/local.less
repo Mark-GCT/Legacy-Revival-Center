@@ -1,0 +1,377 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// LOCAL STYLES — LRC Homepage (below-fold sections)
+// Countdown, Service Times, and Global Impact sections
+// ─────────────────────────────────────────────────────────────────────────────
+
+/*-- -------------------------- -->
+<---        Countdown            -->
+<--- -------------------------- -*/
+
+@media only screen and (min-width: 0px) {
+    #lrc-countdown {
+        background: var(--primary);
+        color: #fff;
+        padding: 2.5rem 0;
+        border-top: 4px solid #000;
+
+        .cs-container {
+            text-align: center;
+        }
+
+        .cs-countdown-title {
+            font-family: var(--font-display);
+            font-size: clamp(1.25rem, 3vw, 2rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+
+            svg {
+                width: 2rem;
+                height: 2rem;
+                flex-shrink: 0;
+            }
+        }
+
+        .cs-countdown-units {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .cs-countdown-unit {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cs-countdown-value {
+            background: #fff;
+            color: var(--foreground);
+            font-family: var(--font-display);
+            font-weight: 900;
+            width: 5rem;
+            height: 5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            border: 2px solid #000;
+            box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.4);
+        }
+
+        .cs-countdown-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-top: 0.75rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    #lrc-countdown {
+        .cs-countdown-units { gap: 2rem; }
+
+        .cs-countdown-value {
+            width: 7rem;
+            height: 7rem;
+            font-size: 2.5rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #lrc-countdown {
+        .cs-countdown-value {
+            width: 8.5rem;
+            height: 8.5rem;
+            font-size: 3rem;
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---      Service Times          -->
+<--- -------------------------- -*/
+
+@media only screen and (min-width: 0px) {
+    #lrc-services {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            // No extra overrides needed — inherits 1280px max + 1.5rem padding
+        }
+
+        .cs-service-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        // Left column
+        .cs-service-items {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .cs-service-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .cs-service-icon {
+            background: var(--muted);
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+
+            svg {
+                width: 2rem;
+                height: 2rem;
+                color: var(--primary);
+                stroke: var(--primary);
+            }
+        }
+
+        .cs-service-label {
+            font-weight: 700;
+            font-size: 1.125rem;
+            text-transform: uppercase;
+            color: var(--foreground);
+            margin-bottom: 0.25rem;
+        }
+
+        .cs-service-time {
+            color: var(--muted-fg);
+            font-size: 0.9375rem;
+        }
+
+        // Right column — sermon card
+        .cs-sermon-card {
+            position: relative;
+            height: 31.25rem;
+            background: var(--muted);
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                filter: grayscale(1);
+                opacity: 0.8;
+                mix-blend-mode: multiply;
+            }
+
+            .cs-sermon-card-border {
+                position: absolute;
+                inset: 1rem;
+                border: 2px solid rgba(230, 0, 0, 0.25);
+                pointer-events: none;
+                z-index: 1;
+            }
+
+            .cs-sermon-card-overlay {
+                position: absolute;
+                bottom: 2rem;
+                left: 2rem;
+                right: 2rem;
+                background: var(--background);
+                padding: 1.5rem;
+                z-index: 2;
+
+                h3 {
+                    font-size: 1.5rem;
+                    text-transform: uppercase;
+                    margin-bottom: 0.5rem;
+                    letter-spacing: -0.02em;
+                }
+
+                p {
+                    color: var(--muted-fg);
+                    margin-bottom: 1rem;
+                    font-size: 0.9375rem;
+                }
+            }
+        }
+
+        // Link arrow
+        .cs-link-arrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: gap 0.15s;
+
+            svg {
+                width: 1rem;
+                height: 1rem;
+                stroke: currentColor;
+            }
+
+            &:hover { gap: 0.75rem; }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #lrc-services {
+        .cs-service-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---       Global Impact         -->
+<--- -------------------------- -*/
+
+@media only screen and (min-width: 0px) {
+    #lrc-impact {
+        padding: var(--sectionPadding);
+        background: var(--secondary);
+        color: var(--secondary-fg);
+        position: relative;
+        overflow: hidden;
+
+        // Radial glow decoration
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 31rem;
+            height: 31rem;
+            background: radial-gradient(circle, rgba(230, 0, 0, 0.2), transparent 70%);
+            transform: translate(50%, -50%);
+            pointer-events: none;
+        }
+
+        .cs-container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cs-intro {
+            max-width: 48rem;
+            margin: 0 auto 4rem;
+            text-align: center;
+        }
+
+        .cs-title {
+            color: #fff;
+        }
+
+        .cs-text {
+            color: var(--muted-fg);
+        }
+
+        // Country cards grid
+        .cs-impact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .cs-country-card {
+            position: relative;
+            height: 25rem;
+            overflow: hidden;
+            background: var(--secondary);
+            cursor: pointer;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0.6;
+                transition: transform 0.7s, opacity 0.3s;
+            }
+
+            &:hover img {
+                transform: scale(1.08);
+                opacity: 0.4;
+            }
+
+            .cs-card-gradient {
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(to top, var(--secondary) 0%, rgba(18, 18, 18, 0.2) 60%, transparent 100%);
+            }
+
+            .cs-card-body {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                padding: 2rem;
+                transform: translateY(1rem);
+                transition: transform 0.3s;
+            }
+
+            &:hover .cs-card-body { transform: translateY(0); }
+
+            .cs-card-accent {
+                width: 3rem;
+                height: 0.25rem;
+                background: var(--primary);
+                margin-bottom: 0.75rem;
+            }
+
+            .cs-card-name {
+                font-family: var(--font-display);
+                font-size: 2rem;
+                font-weight: 900;
+                text-transform: uppercase;
+                color: #fff;
+                margin-bottom: 0.5rem;
+                letter-spacing: -0.02em;
+            }
+
+            .cs-card-link {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                color: #fff;
+                font-weight: 700;
+                font-size: 0.875rem;
+                text-transform: uppercase;
+                text-decoration: none;
+                opacity: 0;
+                transition: opacity 0.4s 0.1s, color 0.15s;
+
+                svg {
+                    width: 1rem;
+                    height: 1rem;
+                    stroke: currentColor;
+                }
+
+                &:hover { color: var(--primary); }
+            }
+
+            &:hover .cs-card-link { opacity: 1; }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #lrc-impact {
+        .cs-impact-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}

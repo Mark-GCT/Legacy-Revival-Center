@@ -1,0 +1,61 @@
+---
+title: "Give — Legacy Revival Center"
+description: "Partner in Revival. Your generosity fuels the local and global mission of Legacy Revival Center."
+permalink: "/give/"
+tags: "sitemap"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/pages.css"/>
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--              Give Page Hero                  -->
+    <!-- ============================================ -->
+    <div id="lrc-page-hero">
+        <div class="cs-hero-bg">
+            <picture>
+                <source srcset="{% getUrl '/assets/images/give-hero.png' | resize({ width: 1920, height: 700 }) | avif %}" type="image/avif">
+                <source srcset="{% getUrl '/assets/images/give-hero.png' | resize({ width: 1920, height: 700 }) | webp %}" type="image/webp">
+                <img src="{% getUrl '/assets/images/give-hero.png' | resize({ width: 1920, height: 700 }) | jpeg %}"
+                    alt="Give — Legacy Revival Center" width="1920" height="700" loading="eager" decoding="async"
+                    style="mix-blend-mode:luminosity;">
+            </picture>
+        </div>
+        <div class="cs-container">
+            <h1 class="cs-page-title cs-fade-up">Partner in <span class="text-primary">Revival</span></h1>
+            <p class="cs-page-subtitle cs-fade-up" style="margin:0 auto;">
+                Your generosity fuels the local and global mission of Legacy Revival Center.
+            </p>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!--              Give Form                       -->
+    <!-- ============================================ -->
+    <section id="lrc-give" class="lrc-section">
+        <div class="cs-container">
+
+            <div class="cs-give-card cs-fade-up">
+                <h2>Secure Online Giving</h2>
+                <p style="margin: 0 0 1.5rem;">Give securely through our online portal. Your contribution goes directly toward the ministry and mission of Legacy Revival Center.</p>
+                <a href="https://legacyrevival.churchtrac.com/give" target="_blank" rel="noopener noreferrer" class="cs-button-solid cs-give-submit">Give Now</a>
+            </div>
+
+            <!-- Additional giving info -->
+            <div class="cs-give-info cs-fade-up">
+                <p>Prefer to give by mail? Send checks payable to:<br>
+                    <strong>Legacy Revival Center</strong><br>
+                    1240 McDonough Lake Road, Collinsville, IL 62234
+                </p>
+                <p style="font-size:0.75rem;">Legacy Revival Center is a registered 501(c)(3) non-profit organization. All contributions are tax deductible.</p>
+            </div>
+
+        </div>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,118 @@
+---
+title: "Global Fellowships — Legacy Revival Center"
+description: "Legacy Revival Center is actively planting and partnering with revival hubs in Uganda, Argentina, and Nepal."
+permalink: "/fellowships/"
+tags: "sitemap"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/pages.css"/>
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--           Fellowships Page Hero              -->
+    <!-- ============================================ -->
+    <div id="lrc-page-hero">
+        <div class="cs-hero-bg">
+            <picture>
+                <source srcset="{% getUrl '/assets/images/fellowship-hero.png' | resize({ width: 1920, height: 700 }) | avif %}" type="image/avif">
+                <source srcset="{% getUrl '/assets/images/fellowship-hero.png' | resize({ width: 1920, height: 700 }) | webp %}" type="image/webp">
+                <img src="{% getUrl '/assets/images/fellowship-hero.png' | resize({ width: 1920, height: 700 }) | jpeg %}"
+                    alt="Global Fellowship" width="1920" height="700" loading="eager" decoding="async">
+            </picture>
+        </div>
+        <div class="cs-container">
+            <h1 class="cs-page-title cs-fade-up">Global <span class="text-primary">Fellowships</span></h1>
+            <p class="cs-page-subtitle cs-fade-up" style="margin:0 auto;">
+                The Great Commission isn't a suggestion. We are actively planting and partnering with revival hubs across the globe.
+            </p>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!--           Fellowship Items                   -->
+    <!-- ============================================ -->
+    <section id="lrc-fellowships" class="lrc-section">
+        <div class="cs-container" style="max-width:64rem;">
+            <div style="display:flex;flex-direction:column;gap:6rem;">
+
+                <!-- Uganda -->
+                <div id="uganda" class="cs-fellowship-item cs-fade-up">
+                    <div class="cs-fellowship-text">
+                        <div class="cs-fellowship-watermark" aria-hidden="true">Uganda</div>
+                        <h2>Legacy Revival Fellowship of Uganda</h2>
+                        <p>Lead by Apostle Edward &amp; Jackie, Legacy Revival Fellowship of Uganda seek to dig deep wells of revival, support orphanages &amp; surrounding communities, and plant vibrant Spirit-filled churches and spread the Gospel of Jesus Christ to all of Uganda.</p>
+                    </div>
+                    <div class="cs-fellowship-image">
+                        <div class="cs-fellowship-image-wrap">
+                            <picture>
+                                <source srcset="{% getUrl '/assets/images/lrc-uganda-pastor.jpg' | resize({ width: 700, height: 525 }) | avif %}" type="image/avif">
+                                <source srcset="{% getUrl '/assets/images/lrc-uganda-pastor.jpg' | resize({ width: 700, height: 525 }) | webp %}" type="image/webp">
+                                <img src="{% getUrl '/assets/images/lrc-uganda-pastor.jpg' | resize({ width: 700, height: 525 }) | jpeg %}"
+                                    alt="Apostle Edward &amp; Jackie — Legacy Revival Fellowship of Uganda"
+                                    width="700" height="525" loading="lazy" decoding="async">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Argentina -->
+                <div id="argentina" class="cs-fellowship-item cs-reverse cs-fade-up">
+                    <div class="cs-fellowship-text">
+                        <div class="cs-fellowship-watermark" aria-hidden="true">Argentina</div>
+                        <h2>Legacy Revival Fellowship of Argentina</h2>
+                        <p>Fanning the flames of the Argentine revival heritage, Pastors Jose &amp; Florencia are feeding the poor, reaching the unreached, and planting revival churches all throughout Argentina.</p>
+                    </div>
+                    <div class="cs-fellowship-image">
+                        <div class="cs-fellowship-image-wrap">
+                            <picture>
+                                <source srcset="{% getUrl '/assets/images/lrc-joseflorencia.jpg' | resize({ width: 700, height: 525 }) | avif %}" type="image/avif">
+                                <source srcset="{% getUrl '/assets/images/lrc-joseflorencia.jpg' | resize({ width: 700, height: 525 }) | webp %}" type="image/webp">
+                                <img src="{% getUrl '/assets/images/lrc-joseflorencia.jpg' | resize({ width: 700, height: 525 }) | jpeg %}"
+                                    alt="Pastors Jose &amp; Florencia — Legacy Revival Fellowship of Argentina"
+                                    width="700" height="525" loading="lazy" decoding="async">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nepal -->
+                <div id="nepal" class="cs-fellowship-item cs-fade-up">
+                    <div class="cs-fellowship-text">
+                        <div class="cs-fellowship-watermark" aria-hidden="true">Nepal</div>
+                        <h2>Legacy Revival Fellowship of Nepal</h2>
+                        <p>Reaching the unreached in the Himalayas. Lead by Pastor Salomon Lama, Legacy Revival Fellowship of Nepal is planting churches and spreading the Gospel of Jesus to every remote corner of Nepal.</p>
+                    </div>
+                    <div class="cs-fellowship-image">
+                        <div class="cs-fellowship-image-wrap">
+                            <picture>
+                                <source srcset="{% getUrl '/assets/images/lrc-salomon.jpg' | resize({ width: 700, height: 525 }) | avif %}" type="image/avif">
+                                <source srcset="{% getUrl '/assets/images/lrc-salomon.jpg' | resize({ width: 700, height: 525 }) | webp %}" type="image/webp">
+                                <img src="{% getUrl '/assets/images/lrc-salomon.jpg' | resize({ width: 700, height: 525 }) | jpeg %}"
+                                    alt="Pastor Salomon Lama — Legacy Revival Fellowship of Nepal"
+                                    width="700" height="525" loading="lazy" decoding="async">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--           Support Missions CTA               -->
+    <!-- ============================================ -->
+    <section id="lrc-missions-cta" class="lrc-section-dark" style="text-align:center;">
+        <div class="cs-container" style="max-width:48rem;">
+            <h2 class="cs-title cs-fade-up">Support Global <span class="text-primary">Missions</span></h2>
+            <p class="cs-text cs-fade-up" style="margin:0 auto 2rem;">Your giving directly fuels revival on the other side of the world.</p>
+            <a href="/give/" class="cs-button-solid cs-fade-up">Partner with Us</a>
+        </div>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,76 @@
+<!-- ============================================ -->
+<!--                   Footer                     -->
+<!-- ============================================ -->
+
+<footer id="cs-footer">
+    <div class="cs-container">
+        <!-- Logo & Address Column -->
+        <div class="cs-logo-group">
+            <a class="cs-logo" href="/" aria-label="Legacy Revival Center home">
+                <img class="cs-logo-img" src="/assets/images/lrc-logo.png" alt="Legacy Revival Center" width="200" height="60" loading="lazy" decoding="async">
+            </a>
+            <p class="cs-tagline">Leaving a Legacy.</p>
+            <address class="cs-address" style="font-style:normal;">
+                <p>1240 McDonough Lake Road</p>
+                <p>Collinsville, IL 62234</p>
+                <p><a href="mailto:{{ client.email }}" class="cs-address-link">{{ client.email }}</a></p>
+                <p><a href="tel:{{ client.phoneForTel }}" class="cs-address-link">{{ client.phoneFormatted }}</a></p>
+            </address>
+            <!-- Social Links -->
+            <div class="cs-social">
+                <a class="cs-social-link" aria-label="Visit our YouTube channel" href="{{ client.socials.youtube }}" target="_blank" rel="noopener">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+                </a>
+                <a class="cs-social-link" aria-label="Visit our Facebook page" href="{{ client.socials.facebook }}" target="_blank" rel="noopener">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                </a>
+                <a class="cs-social-link" aria-label="Visit our Instagram profile" href="{{ client.socials.instagram }}" target="_blank" rel="noopener">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <ul class="cs-nav" aria-label="Quick links">
+            <li class="cs-nav-li">
+                <span class="cs-header">Quick Links</span>
+            </li>
+            <li class="cs-nav-li"><a class="cs-nav-link" href="/about/">About Us</a></li>
+            <li class="cs-nav-li"><a class="cs-nav-link" href="/beliefs/">Our Beliefs</a></li>
+            <li class="cs-nav-li"><a class="cs-nav-link" href="/sermons/">Sermons</a></li>
+            <li class="cs-nav-li"><a class="cs-nav-link" href="/events/">Events</a></li>
+            <li class="cs-nav-li"><a class="cs-nav-link" href="/contact/">Contact Us</a></li>
+            <li class="cs-nav-li"><a class="cs-nav-link" href="/give/">Give</a></li>
+        </ul>
+
+        <!-- Global Fellowships -->
+        <ul class="cs-nav" aria-label="Global Fellowships">
+            <li class="cs-nav-li">
+                <span class="cs-header">Global Fellowships</span>
+            </li>
+            <li class="cs-nav-li"><a class="cs-nav-link" href="/fellowships/#uganda">Uganda</a></li>
+            <li class="cs-nav-li"><a class="cs-nav-link" href="/fellowships/#argentina">Argentina</a></li>
+            <li class="cs-nav-li"><a class="cs-nav-link" href="/fellowships/#nepal">Nepal</a></li>
+        </ul>
+
+        <!-- Newsletter -->
+        <div class="cs-newsletter">
+            <span class="cs-header">Stay Updated</span>
+            <p class="cs-newsletter-text">Sign up for updates on events and messages.</p>
+            <form data-netlify="true" class="cs-newsletter-form" novalidate aria-label="Newsletter signup">
+                <label class="cs-visually-hidden" for="footer-email">Email address</label>
+                <input class="cs-newsletter-input" id="footer-email" type="email" placeholder="Enter your email" required autocomplete="email">
+                <div data-netlify-recaptcha="true"></div>
+<button class="cs-newsletter-btn" type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="cs-footer-bottom">
+        <div class="cs-container">
+            <p>&copy; {% year %} <a href="/">Legacy Revival Center</a> | All rights reserved | Website by <a href="https://www.gatewaycornerstone.com" target="_blank" rel="noopener noreferrer">Gateway Cornerstone Technologies</a></p>
+            <a href="/blog-login/" class="cs-footer-author">Author Login</a>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,51 @@
+---
+title: "About Us — Legacy Revival Center"
+description: "Learn about Legacy Revival Center — a non-denominational, pentecostal church in Collinsville, IL."
+permalink: "/about/"
+tags: "sitemap"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/pages.css"/>
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--              About Page Hero                 -->
+    <!-- ============================================ -->
+    <div id="lrc-page-hero">
+        <div class="cs-container">
+            <h1 class="cs-page-title cs-fade-up">About <span class="text-primary">Us</span></h1>
+            <p class="cs-page-subtitle cs-fade-up">
+                Legacy Revival Center is a non-denominational, pentecostal church located in Collinsville, IL. We are passionate about experiencing the presence of God, equipping believers for ministry, and impacting our world with the gospel of Jesus Christ.
+            </p>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!--               About Cards                    -->
+    <!-- ============================================ -->
+    <section id="lrc-about" class="lrc-section">
+        <div class="cs-container" style="max-width:56rem;">
+            <div class="cs-about-cards">
+
+                <div class="cs-about-card cs-primary-top cs-fade-up">
+                    <h2>Our Beliefs</h2>
+                    <p>Discover what we believe about God, salvation, the Holy Spirit, and the church.</p>
+                    <a href="/beliefs/">Read our Statement of Faith &rarr;</a>
+                </div>
+
+                <div class="cs-about-card cs-dark-top cs-fade-up">
+                    <h2>Our Leadership</h2>
+                    <p>Meet the pastors and leaders who serve and guide the vision of Legacy Revival Center.</p>
+                    <a href="/leadership/">Meet our Team &rarr;</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

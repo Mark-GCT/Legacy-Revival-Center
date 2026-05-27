@@ -1,0 +1,31 @@
+---
+title: "Author Login — Legacy Revival Center"
+description: "Author login for the Legacy Revival Center blog."
+permalink: "/blog-login/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/pages.css"/>
+{% endblock %}
+
+{% block body %}
+    <section class="lrc-section" style="min-height:70vh;display:flex;align-items:center;">
+        <div class="cs-container" style="max-width:28rem;">
+            <div class="cs-give-card" style="border-top:4px solid var(--primary);">
+                <h1 style="font-size:2rem;text-transform:uppercase;text-align:center;margin-bottom:0.5rem;">Author Login</h1>
+                <p class="text-muted" style="text-align:center;margin-bottom:2rem;">Access the blog management dashboard.</p>
+                <div class="cs-form-group">
+                    <label class="cs-form-label" for="login-email">Email</label>
+                    <input class="cs-form-input" id="login-email" type="email" autocomplete="email">
+                </div>
+                <div class="cs-form-group">
+                    <label class="cs-form-label" for="login-password">Password</label>
+                    <input class="cs-form-input" id="login-password" type="password" autocomplete="current-password">
+                </div>
+                <a href="/admin/" class="cs-button-solid" style="width:100%;justify-content:center;height:3.5rem;margin-top:0.5rem;">Sign In</a>
+            </div>
+        </div>
+    </section>
+{% endblock %}

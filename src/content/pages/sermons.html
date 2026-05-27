@@ -1,0 +1,111 @@
+---
+title: "Sermons — Legacy Revival Center"
+description: "Watch and listen to sermons from Legacy Revival Center. Latest messages on YouTube and audio podcasts."
+permalink: "/sermons/"
+tags: "sitemap"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/pages.css"/>
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--             Sermons Page Hero                -->
+    <!-- ============================================ -->
+    <div id="lrc-page-hero">
+        <div class="cs-hero-bg">
+            <picture>
+                <source srcset="{% getUrl '/assets/images/sermons-hero.png' | resize({ width: 1920, height: 700 }) | avif %}" type="image/avif">
+                <source srcset="{% getUrl '/assets/images/sermons-hero.png' | resize({ width: 1920, height: 700 }) | webp %}" type="image/webp">
+                <img src="{% getUrl '/assets/images/sermons-hero.png' | resize({ width: 1920, height: 700 }) | jpeg %}"
+                    alt="Bible and worship" width="1920" height="700" loading="eager" decoding="async"
+                    style="mix-blend-mode:luminosity;">
+            </picture>
+        </div>
+        <div class="cs-container">
+            <h1 class="cs-page-title cs-fade-up">Watch &amp; <span class="text-primary">Listen</span></h1>
+            <p class="cs-page-subtitle cs-fade-up">Catch up on the latest messages from Legacy Revival Center.</p>
+            <div class="cs-hero-actions cs-fade-up">
+                <a href="https://www.youtube.com/@legacyrevivalcenter3190" target="_blank" rel="noopener noreferrer" class="cs-button-solid">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1.25rem;height:1.25rem;" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                    YouTube Channel
+                </a>
+                <a href="https://feeds.buzzsprout.com/1908759.rss" target="_blank" rel="noopener noreferrer" class="cs-button-outline" style="border-color:#fff;color:#fff;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1.25rem;height:1.25rem;" aria-hidden="true"><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/></svg>
+                    Podcast
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!--           YouTube Playlist Embed             -->
+    <!-- ============================================ -->
+    <section id="lrc-sermons-embed" class="lrc-section-muted">
+        <div class="cs-container">
+            <div style="max-width:72rem;margin:0 auto;">
+                <h2 class="cs-title cs-fade-up" style="margin-bottom:2.5rem;">Latest Sermons</h2>
+                <div class="cs-embed-wrap cs-fade-up">
+                    <iframe
+                        src="https://www.youtube.com/embed/videoseries?list=PL6WeXBVh4a5Zxrw9AkMqpjtSvq1DhUaex"
+                        title="Legacy Revival Center Sermons Playlist"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <p class="cs-embed-note">Subscribe to our YouTube channel to get notified when new messages are uploaded.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--           Featured Videos (via RSS)          -->
+    <!-- ============================================ -->
+    <section id="lrc-video-grid" class="lrc-section">
+        <div class="cs-container">
+            <h2 class="cs-title cs-fade-up" style="margin-bottom:2.5rem;">Featured Messages</h2>
+            <div class="cs-video-grid" id="lrc-video-items">
+                <!-- Loaded dynamically via lrc.js -->
+                <div class="cs-loading">
+                    <div class="cs-spinner" aria-hidden="true"></div>
+                    Loading Videos&hellip;
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--             Audio Podcasts                   -->
+    <!-- ============================================ -->
+    <section id="lrc-podcasts" class="lrc-section-muted" style="border-top:1px solid var(--border);">
+        <div class="cs-container" style="max-width:64rem;">
+            <div class="cs-podcast-header cs-fade-up">
+                <div>
+                    <h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/></svg>
+                        Audio Podcasts
+                    </h2>
+                    <p>Listen to our sermons on the go.</p>
+                </div>
+                <div class="cs-podcast-actions">
+                    <a href="https://podcasts.apple.com/us/podcast/legacy-revival-center/id1558516476" target="_blank" rel="noopener noreferrer" class="cs-button-outline">Apple Podcasts</a>
+                    <a href="https://open.spotify.com/show/legacyrevival" target="_blank" rel="noopener noreferrer" class="cs-button-outline">Spotify</a>
+                </div>
+            </div>
+
+            <div class="cs-podcast-list" id="lrc-podcast-list">
+                <!-- Loaded dynamically via lrc.js -->
+                <div class="cs-loading">
+                    <div class="cs-spinner" aria-hidden="true"></div>
+                    Loading Episodes&hellip;
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

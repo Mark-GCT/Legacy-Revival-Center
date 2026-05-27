@@ -1,0 +1,101 @@
+---
+title: "Contact Us — Legacy Revival Center"
+description: "Contact Legacy Revival Center. Have a question, need prayer, or want to visit? Get in touch."
+permalink: "/contact/"
+tags: "sitemap"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/pages.css"/>
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--             Contact Page Hero                -->
+    <!-- ============================================ -->
+    <div id="lrc-page-hero">
+        <div class="cs-container">
+            <h1 class="cs-page-title cs-fade-up">Contact <span class="text-primary">Us</span></h1>
+            <p class="cs-page-subtitle cs-fade-up">Have a question, need prayer, or want to learn more? We'd love to hear from you.</p>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!--             Contact Grid                     -->
+    <!-- ============================================ -->
+    <section id="lrc-contact" class="lrc-section">
+        <div class="cs-container" style="max-width:72rem;">
+            <div class="cs-contact-grid">
+
+                <!-- Contact Form -->
+                <div class="cs-form-col cs-fade-up">
+                    <h2>Get in Touch</h2>
+                    <p>Send us a message and we'll get back to you as soon as possible.</p>
+
+                    <form data-netlify="true" id="lrc-contact-form" novalidate>
+                        <div class="cs-form-row">
+                            <div>
+                                <label class="cs-form-label" for="lrc-firstName">First Name</label>
+                                <input class="cs-form-input" id="lrc-firstName" name="firstName" type="text" autocomplete="given-name">
+                            </div>
+                            <div>
+                                <label class="cs-form-label" for="lrc-lastName">Last Name</label>
+                                <input class="cs-form-input" id="lrc-lastName" name="lastName" type="text" autocomplete="family-name">
+                            </div>
+                        </div>
+                        <div class="cs-form-group">
+                            <label class="cs-form-label" for="lrc-email">Email Address</label>
+                            <input class="cs-form-input" id="lrc-email" name="email" type="email" autocomplete="email">
+                        </div>
+                        <div class="cs-form-group">
+                            <label class="cs-form-label" for="lrc-message">Message</label>
+                            <textarea class="cs-form-textarea" id="lrc-message" name="message"></textarea>
+                        </div>
+                        <div data-netlify-recaptcha="true"></div>
+<button type="submit" class="cs-button-solid cs-form-submit">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Visit Info Panel -->
+                <div class="cs-info-panel cs-fade-up">
+                    <h2>Visit Us</h2>
+
+                    <div class="cs-info-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <div>
+                            <h3>Address</h3>
+                            <p>1240 McDonough Lake Road<br>Collinsville, IL 62234</p>
+                        </div>
+                    </div>
+
+                    <div class="cs-info-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.18 12.06a19.79 19.79 0 01-3.07-8.67A2 2 0 013.09 1.4h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 9.55a16 16 0 006.29 6.29l1.42-1.42a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                        <div>
+                            <h3>Phone</h3>
+                            <p><a href="tel:{{ client.phoneForTel }}">{{ client.phoneFormatted }}</a></p>
+                        </div>
+                    </div>
+
+                    <div class="cs-info-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <div>
+                            <h3>Email</h3>
+                            <p><a href="mailto:{{ client.email }}">{{ client.email }}</a></p>
+                        </div>
+                    </div>
+
+                    <div class="cs-info-map-btn">
+                        <a href="{{ client.address.mapLink }}" target="_blank" rel="noopener noreferrer" class="cs-button-outline" style="border-color:rgba(255,255,255,0.4);color:#fff;width:100%;justify-content:center;">
+                            Get Directions
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
